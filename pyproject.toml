@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=80", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nodus-circuit-breaker"
+version = "0.1.0"
+description = "Three-state circuit breaker with async support and optional LLM adapter"
+authors = [{ name = "Shawn Knight" }]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.11"
+keywords = ["circuit-breaker", "resilience", "llm", "ai", "nodus"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Libraries",
+]
+dependencies = []
+
+[project.optional-dependencies]
+metrics = ["prometheus-client>=0.10.0"]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.21"]
+
+[project.urls]
+Homepage = "https://github.com/Masterplanner25/nodus-circuit-breaker"
+Repository = "https://github.com/Masterplanner25/nodus-circuit-breaker"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["nodus_circuit_breaker*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
