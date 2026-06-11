@@ -6,7 +6,7 @@ and an optional LLM provider adapter.**
 Zero required dependencies — pure Python standard library. Optional
 Prometheus metrics via the `[metrics]` extra.
 
-> **Status:** v0.1.0 — prepared, not yet published.
+> **Status:** v0.1.0 — published on [PyPI](https://pypi.org/project/nodus-circuit-breaker/).
 
 ---
 
